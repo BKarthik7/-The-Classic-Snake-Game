@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NokiaSnake</title>
+    <link rel="stylesheet" href="css/Mystyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+</head>
+<body>
+    <div class="topPanel">
+        <div class="panel1"><button id="button" onclick="launch()" class="start">START</button></div>
+        <div class="panel2">
+            <div class="scoreBoard">
+                Score: <span id="score">0</span>
+			</div>
+		</div>
+        <div class="panel2">
+            <div class="scoreBoard">
+                High Score: <span id="highScore">0</span>
+			</div>
+		</div>
+    </div>
+    <div class="body">
+        <div id="board"></div>
+    </div>
+	<div id="controls" class="controls">
+        <div class="blocks"></div>
+        <div class="blocks"><button id="ArrowUp">↑</button></div>
+        <div class="blocks"></div>
+        <div class="blocks"><button id="ArrowLeft">←</button></div>
+        <div class="blocks"><button id="ArrowDown">↓</button></div>
+        <div class="blocks"><button id="ArrowRight">→</button></div>
+    </div>
+</body>
+<script>
+    //initial();
+    
+    var x = document.getElementById("board");
+    x.innerHTML="";
+    for(i=1;i<=20;++i){
+        wall = document.createElement('div');
+        wall.classList.add('wall');
+        wall.style.gridRowStart = 1;
+        wall.style.gridColumnStart = i;
+        x.appendChild(wall);
+        wall = document.createElement('div');
+        wall.classList.add('wall');
+        wall.style.gridRowStart = 20;
+        wall.style.gridColumnStart = i;
+        x.appendChild(wall);
+        wall = document.createElement('div');
+        wall.classList.add('wall');
+        wall.style.gridRowStart = i;
+        wall.style.gridColumnStart = 1;
+        x.appendChild(wall);
+        wall = document.createElement('div');
+        wall.classList.add('wall');
+        wall.style.gridRowStart = i;
+        wall.style.gridColumnStart = 20;
+        x.appendChild(wall);
+    }
+    snakeElement = document.createElement('div');
+    snakeElement.style.gridColumnStart = 2;
+    snakeElement.style.gridRowStart = 2;
+    snakeElement.classList.add('tail_r');
+    x.appendChild(snakeElement);
+    
+    snakeElement = document.createElement('div');
+    snakeElement.style.gridColumnStart = 3;
+    snakeElement.style.gridRowStart = 2;
+    snakeElement.classList.add('body_h');
+    x.appendChild(snakeElement);
+    
+    snakeElement = document.createElement('div');
+    snakeElement.style.gridColumnStart = 4;
+    snakeElement.style.gridRowStart = 2;
+    snakeElement.classList.add('head_r');
+    x.appendChild(snakeElement);
+    
+    function forMobile(){        
+        let isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? true : false;
+        
+        if(isMobileDevice){
+            controls.classList.add("controls");
+            controls.innerHTML='<div class="blocks"></div><div class="blocks"><button id="ArrowUp"></button></div><div class="blocks"></div><div class="blocks"><button id="ArrowLeft"></button></div><div class="blocks"><button id="ArrowDown"></button></div><div class="blocks"><button id="ArrowRight"></button></div>';
+
+            board.style.width="90vw";
+            board.style.height="90vw";
+        }
+        else{
+            controls.classList.remove("controls");
+            controls.innerHTML="";
+
+            board.style.width = "70vmin";
+            board.style.height = "70vmin";
+        }  
+
+
+    }
+    forMobile();
+    </script>
+<script id="myScript" src="js/Myindex.js"></script>
+</html>
