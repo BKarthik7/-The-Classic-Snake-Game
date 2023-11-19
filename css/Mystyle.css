@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css?family=Audiowide&&effects=outline");
+@font-face {
+    font-family: "digits";
+    src: url(digital-7.ttf);
+}
+*{
+    padding:0px;
+    margin: 0px;
+    font-family: "Audiowide";
+}
+body{
+    background-color: rgb(201, 222, 163);
+}
+.topPanel{
+    width:100vw;
+}
+.panel1{
+    width:100vw;
+    height:12vmin;
+    display: flex;
+    justify-content: center;
+}
+.panel2{
+    float:left;
+    width:50vw;
+    height:7vmin;
+    display:flex;
+    justify-content: center;
+}
+#button{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    width:20vmin;
+    height:7vmin;
+    margin-top:1.5vmin;
+    font-size: 3.5vmin;
+    text-align:center;
+    font-weight: bolder;
+    border-radius: 5vmin;
+    text-shadow: .1vh .1vh .2vh rgba(0, 0, 0, 0.67);
+    box-shadow: 0vh 1vmin .5vmin rgb(66, 136, 81);
+    outline: none;
+}
+#button:active{
+    margin-top:2vmin;
+    box-shadow: 0vmin .5vmin .5vmin rgb(45, 80, 53);
+}
+.scoreBoard{
+    border:.5vmin solid rgb(50, 138, 33);
+    /*box-shadow:0px 0px 3vmin rgb(21, 255, 0);*/
+    width:30vw;
+    border-radius: 1vmin;
+    padding:1vmin 2.5vmin;
+    font-size:3vmin;
+    background-color: white;
+}
+.scoreBoard span{
+    font-family: "digits";
+    font-size:4vmin;
+    font-weight:bolder;
+    margin-left:3vmin;
+    letter-spacing: .5vmin;
+}
+
+.start{
+    background-image: radial-gradient(green,rgb(187, 255, 0));
+    border: 1vmin solid rgb(255, 255, 0);
+}
+.stop{
+    background-image: radial-gradient(red,rgb(255, 145, 145));
+    border: 1vmin solid rgb(255, 208, 169);
+}
+
+.body{
+    background-color: (96, 197, 98);
+    min-height: 60vmin;
+    width:100vw;
+    margin-top:12vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board{
+    background-image: url("bg.png");
+    background-size:90%;
+    width: 70vmin;
+    height: 70vmin;
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+}
+
+.head_u{
+    background-image: url(../snake2/head_u.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.head_d{
+    background-image: url(../snake2/head_d.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.head_l{
+    background-image: url(../snake2/head_l.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.head_r{
+    background-image: url(../snake2/head_r.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tail_u{
+    background-image: url(../snake2/tail_u.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tail_d{
+    background-image: url(../snake2/tail_d.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tail_l{
+    background-image: url(../snake2/tail_l.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tail_r{
+    background-image: url(../snake2/tail_r.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.body_v{
+    background-image: url(../snake2/body_v.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body_h{
+    background-image: url(../snake2/body_h.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body_tl{
+    background-image: url(../snake2/body_tl.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body_tr{
+    background-image: url(../snake2/body_tr.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body_bl{
+    background-image: url(../snake2/body_bl.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body_br{
+    background-image: url(../snake2/body_br.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.food{
+    background-image: url(../snake2/apple.png);
+    background-size: cover;
+}
+.wall{
+    background-color:darkgreen;
+}
+
+.controls{
+    margin:2vw 9.5vw;
+    width:81vw;
+    height:54vw;
+    display: grid;
+    grid-template-columns: 27vw 27vw 27vw;
+}
+.blocks{
+    padding: .5vw;
+}
+.blocks button{
+    background-color: white;
+    width:25vw;
+    height:25vw;
+    border:1vw solid rgb(3, 71, 17);
+    border-radius: 2vw;
+    box-shadow: 1vw 1vw 1vw rgb(62, 156, 80);
+    /*font-size: 15vw;
+    font-weight: 900;
+    font-family: 'Audiowide';*/
+    background-size: 10vw;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+#ArrowUp{
+    background-image: url(up.jpg);
+}
+#ArrowDown{
+    background-image: url(down.jpg);
+}
+#ArrowLeft{
+    background-image: url(left.jpg);
+}
+#ArrowRight{
+    background-image: url(right.jpg);
+}
+.blocks button:active{
+    margin:.5vw -.5vw -.5vw .5vw;
+    box-shadow: .5vw .5vw .5vw rgb(182, 182, 182);
+}
