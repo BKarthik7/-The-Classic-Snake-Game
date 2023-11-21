@@ -31,6 +31,26 @@
         <div class="blocks"><button id="ArrowRight">→</button></div>
     </div>
 </body>
+
+<script>
+    function lockPortraitOrientation() {
+        if (screen.orientation && screen.orientation.lock) {
+            screen.orientation.lock('portrait');
+        } else if (screen.lockOrientation) {
+            screen.lockOrientation('portrait');
+        }
+    }
+
+    function checkMobileDevice() {
+        let isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+        if (isMobileDevice) {
+            lockPortraitOrientation();
+        }
+    }
+
+    checkMobileDevice();
+</script>
 <script>
     //initial();
     
