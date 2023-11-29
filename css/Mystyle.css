@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Audiowide&&effects=outline");
+@import url("https://fonts.googleapis.com/css?family=Audiowide");
 @font-face {
     font-family: "digits";
     src: url(digital-7.ttf);
@@ -92,80 +92,80 @@ body{
 }
 
 .head_u{
-    background-image: url(../snake2/head_u.png);
+    background-image: url(../snake/head_u.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .head_d{
-    background-image: url(../snake2/head_d.png);
+    background-image: url(../snake/head_d.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .head_l{
-    background-image: url(../snake2/head_l.png);
+    background-image: url(../snake/head_l.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .head_r{
-    background-image: url(../snake2/head_r.png);
+    background-image: url(../snake/head_r.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .tail_u{
-    background-image: url(../snake2/tail_u.png);
+    background-image: url(../snake/tail_u.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .tail_d{
-    background-image: url(../snake2/tail_d.png);
+    background-image: url(../snake/tail_d.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .tail_l{
-    background-image: url(../snake2/tail_l.png);
+    background-image: url(../snake/tail_l.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .tail_r{
-    background-image: url(../snake2/tail_r.png);
+    background-image: url(../snake/tail_r.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .body_v{
-    background-image: url(../snake2/body_v.png);
+    background-image: url(../snake/body_v.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .body_h{
-    background-image: url(../snake2/body_h.png);
+    background-image: url(../snake/body_h.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .body_tl{
-    background-image: url(../snake2/body_tl.png);
+    background-image: url(../snake/body_tl.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .body_tr{
-    background-image: url(../snake2/body_tr.png);
+    background-image: url(../snake/body_tr.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .body_bl{
-    background-image: url(../snake2/body_bl.png);
+    background-image: url(../snake/body_bl.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .body_br{
-    background-image: url(../snake2/body_br.png);
+    background-image: url(../snake/body_br.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .food{
-    background-image: url(../snake2/apple.png);
+    background-image: url(../snake/apple.png);
     background-size: cover;
 }
 .wall{
@@ -179,19 +179,14 @@ body{
     display: grid;
     grid-template-columns: 27vw 27vw 27vw;
 }
-.blocks{
-    padding: .5vw;
-}
 .blocks button{
     background-color: white;
-    width:25vw;
-    height:25vw;
+    width:24vw;
+    height:24vw;
     border:1vw solid rgb(3, 71, 17);
+    margin:1vw 2vw 2vw 1vw;
     border-radius: 2vw;
     box-shadow: 1vw 1vw 1vw rgb(62, 156, 80);
-    /*font-size: 15vw;
-    font-weight: 900;
-    font-family: 'Audiowide';*/
     background-size: 10vw;
     background-repeat: no-repeat;
     background-position:center;
@@ -209,6 +204,66 @@ body{
     background-image: url(right.jpg);
 }
 .blocks button:active{
-    margin:.5vw -.5vw -.5vw .5vw;
-    box-shadow: .5vw .5vw .5vw rgb(182, 182, 182);
+    margin:1.5vw;
+    box-shadow: .5vw .5vw .5vw rgb(65, 151, 79);
 }
+
+.shake {
+	animation: shake .3s linear 1;
+}
+
+@keyframes shake {
+
+	10%,
+	90% {
+		transform: translate3d(0.3vmin, 0, 0);
+	}
+
+	20%,
+    30%,
+	50%,
+	70%,
+    80% {
+		transform: translate3d(-0.6vmin, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(0.6vmin, 0, 0);
+	}
+}
+
+#overAlert{
+    display:none;
+    background-color: rgba(0, 0, 0, 0.777);
+    position:absolute;
+    width:100vw;
+    height:100vh;
+}
+#overAlert div{
+    top:50%;
+    left:50%;
+    position: absolute;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+#overAlert h1{
+    font-size: 8vw;
+    color:rgb(255, 0, 0);
+    text-shadow: 0vw .2vw white;
+}
+#overAlert button{
+    color:rgb(64, 255, 0);
+    background-color: transparent;
+    outline:none;
+    border: none;
+    font-size: 2vw;
+    margin-left: 13vw;
+    padding:.5vw 2vw;
+    border-radius:10vw;
+}
+#overAlert button:hover{
+    background-color: rgba(128, 128, 128, 0.204);
+}
+
