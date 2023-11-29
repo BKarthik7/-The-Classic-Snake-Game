@@ -82,7 +82,7 @@ body{
 }
 
 #board{
-    background-image: url("bg.png");
+    background-image: url("../images/bg.png");
     background-size:90%;
     width: 70vmin;
     height: 70vmin;
@@ -92,80 +92,80 @@ body{
 }
 
 .head_u{
-    background-image: url(../snake/head_u.png);
+    background-image: url(../images/snake/head_u.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .head_d{
-    background-image: url(../snake/head_d.png);
+    background-image: url(../images/snake/head_d.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .head_l{
-    background-image: url(../snake/head_l.png);
+    background-image: url(../images/snake/head_l.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .head_r{
-    background-image: url(../snake/head_r.png);
+    background-image: url(../images/snake/head_r.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .tail_u{
-    background-image: url(../snake/tail_u.png);
+    background-image: url(../images/snake/tail_u.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .tail_d{
-    background-image: url(../snake/tail_d.png);
+    background-image: url(../images/snake/tail_d.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .tail_l{
-    background-image: url(../snake/tail_l.png);
+    background-image: url(../images/snake/tail_l.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .tail_r{
-    background-image: url(../snake/tail_r.png);
+    background-image: url(../images/snake/tail_r.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .body_v{
-    background-image: url(../snake/body_v.png);
+    background-image: url(../images/snake/body_v.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .body_h{
-    background-image: url(../snake/body_h.png);
+    background-image: url(../images/snake/body_h.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .body_tl{
-    background-image: url(../snake/body_tl.png);
+    background-image: url(../images/snake/body_tl.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .body_tr{
-    background-image: url(../snake/body_tr.png);
+    background-image: url(../images/snake/body_tr.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .body_bl{
-    background-image: url(../snake/body_bl.png);
+    background-image: url(../images/snake/body_bl.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .body_br{
-    background-image: url(../snake/body_br.png);
+    background-image: url(../images/snake/body_br.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .food{
-    background-image: url(../snake/apple.png);
+    background-image: url(../images/snake/apple.png);
     background-size: cover;
 }
 .wall{
@@ -192,16 +192,16 @@ body{
     background-position:center;
 }
 #ArrowUp{
-    background-image: url(up.jpg);
+    background-image: url(../images/directions/up.jpg);
 }
 #ArrowDown{
-    background-image: url(down.jpg);
+    background-image: url(../images/directions/down.jpg);
 }
 #ArrowLeft{
-    background-image: url(left.jpg);
+    background-image: url(../images/directions/left.jpg);
 }
 #ArrowRight{
-    background-image: url(right.jpg);
+    background-image: url(../images/directions/right.jpg);
 }
 .blocks button:active{
     margin:1.5vw;
